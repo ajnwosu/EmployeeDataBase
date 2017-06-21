@@ -1,0 +1,23 @@
+
+
+.jumbotron {
+        text-align: center;
+        background-color: #003366 ;
+        color: white;
+        margin-left: 80px ; 
+        margin-right:80px;
+
+    }
+
+.panel-head {
+	color:white;
+	background-color: #003366;
+	padding-left: 20px;
+	font-size: 16px;
+}
+
+#form {
+	padding: 10px;
+
+}
+
