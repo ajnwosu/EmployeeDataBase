@@ -16,6 +16,11 @@ $(document).ready(function() {
   var role;
   var startDate;
   var monthlyRate;
+  var monthWorked;
+  var billed;
+
+  // moment("2014-02-27T10:00:00").format('DD-MM-YYYY');
+  // moment.('2017-06-15').format("MM/DD/YY")
 
   console.log("the page loaded");
 
@@ -45,12 +50,14 @@ $(document).ready(function() {
   		// console.log(childSnapshot.val().startDate);
   		// console.log(childSnapshot.val().monthlyRate);
 
+  		var date = moment(childSnapshot.val().startDate).format("MM/DD/YY");
+
   		$("#table-display").append('<tr>'
                                   + '<td>' + childSnapshot.val().employee +'</td>'
                                   + '<td>' + childSnapshot.val().role +'</td>'
                                   + '<td>' + childSnapshot.val().startDate +'</td>'
                                   + '<td>' + childSnapshot.val().monthlyRate +'</td>'
-                                  + '<td>' + '23' +'</td>'
+                                  + '<td>' + moment().diff(moment.unix(date, "X"), "months") +'</td>'
                                   + '<td>' + '30' +'</td>'
                                   +'</tr>'
         );
