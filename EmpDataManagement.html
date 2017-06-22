@@ -10,6 +10,7 @@
      <!-- bootstrap overrides -->
   <link rel="stylesheet" type="text/css" href="assets/style.css">
   <script src="EmpDataManagement.js"></script>
+  <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
 
 </head>
 
@@ -35,7 +36,6 @@
 <table class="table">
   <thead class="thead-default">
     <tr>
-      <th>#</th>
       <th>Employee Name</th>
       <th>Role</th>
       <th>Start Date</th>
@@ -44,15 +44,14 @@
       <th>Total Billed ($)</th>
     </tr>
   </thead>
-  <tbody>
+  <tbody id="table-display">
     <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
       <td>Otto</td>
       <td>0</td>
       <td>1</td>
       <td>2</td>
       <td>3</td>
+      <td>4</td>
     </tr>
   </tbody>
 </table>

@@ -34,9 +34,33 @@ $(document).ready(function() {
   		employee:employee,
   		role:role,
   		startDate:startDate,
-  		monthlyRate: monthlyRate
+  		monthlyRate: monthlyRate,
+  		dataAdded: firebase.database.ServerValue.TIMESTAMP
   	});
 
+  	database.ref().on("child_added",function(childSnapshot){
+
+  		// console.log(childSnapshot.val().employee);
+  		// console.log(childSnapshot.val().role);
+  		// console.log(childSnapshot.val().startDate);
+  		// console.log(childSnapshot.val().monthlyRate);
+
+  		$("#table-display").append('<tr>'
+                                  + '<td>' + childSnapshot.val().employee +'</td>'
+                                  + '<td>' + childSnapshot.val().role +'</td>'
+                                  + '<td>' + childSnapshot.val().startDate +'</td>'
+                                  + '<td>' + childSnapshot.val().monthlyRate +'</td>'
+                                  + '<td>' + '23' +'</td>'
+                                  + '<td>' + '30' +'</td>'
+                                  +'</tr>'
+        );
+
+  	})
+
   });
+
+  function pullData(){
+
+  }
 
 });
